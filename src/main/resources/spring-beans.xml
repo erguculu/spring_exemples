@@ -47,7 +47,24 @@
 
     <bean id="serviceBean" class="com.example.myformationproject.service.Service">
         <property name="message" value="Hello les gens"></property>
-
     </bean>
 
+    <bean id="firstAddress" class="com.example.myformationproject.model.Address">
+        <property name="fullAddress"
+                  value="Gare Lille Flandres 59000, Batiment A, Etage 4"/>
+    </bean>
+
+    <bean id="customerBean" class="com.example.myformationproject.model.Customer" autowire="byName">
+        <property name="name" value="Agence de Formation"/>
+        <property name="address" ref="firstAddress"/>
+    </bean>
+
+    <bean id="firstPanda" class="com.example.myformationproject.model.Panda" autowire="byName">
+        <property name="kungFu"
+                  ref="firstKungFu"/>
+    </bean>
+
+    <bean id="firstKungFu" class="com.example.myformationproject.model.KungFu">
+        <property name="name" value="Japon"/>
+    </bean>
 </beans>

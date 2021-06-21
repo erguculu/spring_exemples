@@ -1,9 +1,6 @@
 package com.example.myformationproject;
 
-import com.example.myformationproject.model.Company;
-import com.example.myformationproject.model.Developper;
-import com.example.myformationproject.model.FoodPantry;
-import com.example.myformationproject.model.House;
+import com.example.myformationproject.model.*;
 import com.example.myformationproject.service.Service;
 import org.apache.catalina.core.ApplicationContext;
 import org.springframework.beans.factory.ListableBeanFactory;
@@ -28,30 +25,53 @@ public class MyformationprojectApplication {
 		House house = (House) apcxt.getBean(("houseBean1"));
 		House house1 = (House) apcxt.getBean(("houseBean2"));
 
-		System.out.println(house.toString());
-		System.out.println(house1.toString());
+		System.out.println(house);
+		System.out.println(house1);
+		System.out.println("=============================================");
 
 		FoodPantry foodPantry1 = (FoodPantry) apcxt.getBean("foodpantryBean1");
 		FoodPantry foodPantry2 = (FoodPantry) apcxt.getBean("foodpantryBean2");
 
-		System.out.println(foodPantry1.toString());
-		System.out.println(foodPantry2.toString());
-
+		System.out.println(foodPantry1);
+		System.out.println(foodPantry2);
+		System.out.println("=============================================");
 
 		Company company = (Company) apcxt.getBean("companyBean");
 		Developper developper1 = (Developper) apcxt.getBean("devBean");
 		Developper developper2 = (Developper) apcxt.getBean("devBean2");
 
-		System.out.println(company.toString());
-		System.out.println(developper1.toString());
-		System.out.println(developper2.toString());
+		System.out.println(company);
+		System.out.println(developper1);
+		System.out.println(developper2);
+		System.out.println("=============================================");
 
 		Service msg1 = new Service();
 		msg1.setMessage("Je change le message");
+		System.out.println("=============================================");
 
 		Service msg2 = (Service) apcxt.getBean("serviceBean");
-		System.out.println(msg1.toString());
-		System.out.println(msg2.toString());
+		System.out.println(msg1);
+		System.out.println(msg2);
+		System.out.println("=============================================");
+
+		Address adrs1= (Address) apcxt.getBean("firstAddress");
+		System.out.println(adrs1);
+		System.out.println("=============================================");
+
+		Customer customer1 = (Customer) apcxt.getBean("customerBean");
+		System.out.println(customer1);
+		System.out.println("=============================================");
+
+		KungFu kungFu = (KungFu) apcxt.getBean("firstKungFu");
+		System.out.println(kungFu);
+		System.out.println("=============================================");
+
+		Panda panda = (Panda) apcxt.getBean("firstPanda");
+		System.out.println(panda);
+		System.out.println("=============================================");
+
+
+
 	}
 
 }
