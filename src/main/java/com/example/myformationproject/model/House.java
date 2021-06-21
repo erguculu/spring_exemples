@@ -1,6 +1,8 @@
 package com.example.myformationproject.model;
 
-public class House {
+import java.io.Serializable;
+
+public class House implements Serializable {
 
     private String address;
     private int nbWindow;

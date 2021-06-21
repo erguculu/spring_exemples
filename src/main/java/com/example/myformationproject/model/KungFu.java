@@ -1,6 +1,8 @@
 package com.example.myformationproject.model;
 
-public class KungFu {
+import java.io.Serializable;
+
+public class KungFu implements Serializable {
     private String name;
 
     public KungFu() {

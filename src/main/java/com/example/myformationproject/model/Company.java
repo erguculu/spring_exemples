@@ -1,6 +1,8 @@
 package com.example.myformationproject.model;
 
-public class Company {
+import java.io.Serializable;
+
+public class Company implements Serializable {
     private String nom;
     private Developper dev1;
     private Developper dev2;

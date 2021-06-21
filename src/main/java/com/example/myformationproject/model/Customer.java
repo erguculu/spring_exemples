@@ -1,11 +1,18 @@
 package com.example.myformationproject.model;
 
-public class Customer {
+import java.io.Serializable;
+
+public class Customer implements Serializable {
     private String name;
     private Address address;
 
     public Customer( ) {
 
+    }
+
+    public Customer(String name, Address address) {
+        this.name = name;
+        this.address = address;
     }
 
     public String getName() {

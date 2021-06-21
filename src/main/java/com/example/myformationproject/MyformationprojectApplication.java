@@ -70,7 +70,8 @@ public class MyformationprojectApplication {
 		System.out.println(panda);
 		System.out.println("=============================================");
 
-
+		Customer2 customer2 = (Customer2) apcxt.getBean("customer2");
+		System.out.println(customer2);
 
 	}
 

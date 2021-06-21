@@ -1,6 +1,8 @@
 package com.example.myformationproject.model;
 
-public class FoodPantry {
+import java.io.Serializable;
+
+public class FoodPantry  implements Serializable {
     private String nom;
     private float price;
     private int nbStock;

@@ -1,6 +1,8 @@
 package com.example.myformationproject.model;
 
-public class Developper {
+import java.io.Serializable;
+
+public class Developper implements Serializable {
     private String nom;
     private int xpYear;
 

@@ -1,10 +1,16 @@
 package com.example.myformationproject.model;
 
-public class Panda {
+import java.io.Serializable;
+
+public class Panda implements Serializable {
     private KungFu kungFu;
 
     public Panda() {
 
+    }
+
+    public Panda(KungFu kungFu) {
+        this.kungFu = kungFu;
     }
 
     public KungFu getKungFu() {

@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+<context:annotation-config/>
     <bean id="houseBean1" class="com.example.myformationproject.model.House">
         <constructor-arg value="Euratechnologies, Lille 59000" type="java.lang.String"/>
         <constructor-arg value="30" type="int"/>
@@ -56,15 +61,25 @@
 
     <bean id="customerBean" class="com.example.myformationproject.model.Customer" autowire="byName">
         <property name="name" value="Agence de Formation"/>
-        <property name="address" ref="firstAddress"/>
     </bean>
 
-    <bean id="firstPanda" class="com.example.myformationproject.model.Panda" autowire="byName">
-        <property name="kungFu"
-                  ref="firstKungFu"/>
+    <bean id="firstPanda" class="com.example.myformationproject.model.Panda" autowire="constructor">
     </bean>
 
     <bean id="firstKungFu" class="com.example.myformationproject.model.KungFu">
         <property name="name" value="Japon"/>
     </bean>
+
+    <bean id="person" class="com.example.myformationproject.model.Person" >
+        <constructor-arg type="java.lang.String" value="Yusuf"></constructor-arg>
+        <constructor-arg type="java.lang.String" value="Celik"></constructor-arg>
+        <constructor-arg type="java.lang.String" value="Yusuf@yusuf.com"></constructor-arg>
+    </bean>
+
+    <bean id="customer2" class="com.example.myformationproject.model.Customer2" autowire="constructor">
+        <property name="action" value="buying"></property>
+        <property name="type" value="2"></property>
+    </bean>
+
+
 </beans>
