@@ -10,4 +10,13 @@ public class FoodPantry {
         this.price = price;
         this.nbStock = nbStock;
     }
+
+    @Override
+    public String toString() {
+        return "FoodPantry{" +
+                "nom='" + nom + '\'' +
+                ", price=" + price +
+                ", nbStock=" + nbStock +
+                '}';
+    }
 }

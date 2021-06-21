@@ -35,14 +35,19 @@
     </bean>
     
     <bean id="devBean2" class="com.example.myformationproject.model.Developper">
-        <property name="nom" value="Yusuf"></property>
+        <property name="nom" value="Yohan"></property>
         <property name="xpYear" value="4"></property>
     </bean>
 
     <bean id="companyBean" class="com.example.myformationproject.model.Company">
-        <property name="nom" value="Boris company"></property>
+        <property name="nom" value="X company"></property>
         <property name="dev1" ref="devBean"></property>
         <property name="dev2" ref="devBean2"></property>
+    </bean>
+
+    <bean id="serviceBean" class="com.example.myformationproject.service.Service">
+        <property name="message" value="Hello les gens"></property>
+
     </bean>
 
 </beans>

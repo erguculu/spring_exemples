@@ -19,5 +19,13 @@ public class Developper {
     public void setXpYear(int xpYear) {
         this.xpYear = xpYear;
     }
+
+    @Override
+    public String toString() {
+        return "Developper{" +
+                "nom='" + nom + '\'' +
+                ", xpYear=" + xpYear +
+                '}';
+    }
 }
 

@@ -28,4 +28,13 @@ public class Company {
     public void setDev2(Developper dev2) {
         this.dev2 = dev2;
     }
+
+    @Override
+    public String toString() {
+        return "Company{" +
+                "nom='" + nom + '\'' +
+                ", dev1=" + dev1 +
+                ", dev2=" + dev2 +
+                '}';
+    }
 }

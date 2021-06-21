@@ -12,4 +12,13 @@ public class House {
         this.nbDoor = nbDoor;
         this.owner = owner; }
 
+    @Override
+    public String toString() {
+        return "House{" +
+                "address='" + address + '\'' +
+                ", nbWindow=" + nbWindow +
+                ", nbDoor=" + nbDoor +
+                ", owner='" + owner + '\'' +
+                '}';
+    }
 }
